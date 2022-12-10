@@ -6,13 +6,9 @@
 import { onMounted } from "vue";
 import router from "@/router/router";
 
-onMounted(() => {
-  if (Math.random() > 0.5) {
-    router.push("/");
-  } else {
-    router.push("/login");
-  }
-});
+onMounted(() =>
+  localStorage.getItem("token") ? router.push("/") : router.push("/login")
+);
 </script>
 
 <style>
