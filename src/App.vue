@@ -6,8 +6,8 @@
 import { onMounted } from "vue";
 import router from "@/router/router";
 
-onMounted(() =>
-  localStorage.getItem("token") ? router.push("/") : router.push("/login")
+onMounted(() => 
+  localStorage.getItem("token") ? router.push("/") : router.push("/signin")
 );
 </script>
 

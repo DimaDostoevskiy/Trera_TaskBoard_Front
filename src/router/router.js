@@ -1,7 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
 
-import StartPage from "@/pages/HomePage.vue";
-import LogInPage from "@/pages/LogInPage.vue";
+import HomePage from "@/pages/HomePage.vue";
+import SignInPage from "@/pages/SignInPage.vue";
+import SignUpPage from "@/pages/SignUpPage.vue";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -9,12 +10,17 @@ const router = createRouter({
     {
       path: "/",
       name: "home",
-      component: StartPage,
+      component: HomePage,
     },
     {
-      path: "/login",
-      name: "login",
-      component: LogInPage,
+      path: "/signin",
+      name: "signin",
+      component: SignInPage,
+    },
+    {
+      path: "/signup",
+      name: "signup",
+      component: SignUpPage,
     },
   ],
 });
